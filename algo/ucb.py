@@ -40,3 +40,7 @@ class UCBModel(Model):
         ], dtype=int)
 
         return create_spark(users, recs, probs[recs], k)
+
+    @property
+    def item_popularity(self):
+        return list(self.success_count / self.count)

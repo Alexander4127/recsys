@@ -40,3 +40,7 @@ class ThomsonModel(Model):
         relevance = samples_list[np.repeat(np.arange(len(users)), k), recs.astype(int).reshape(-1)]
 
         return create_spark(users, recs.astype(int), relevance, k)
+
+    @property
+    def item_popularity(self):
+        return list(self.success_count / (self.failure_count + self.success_count))

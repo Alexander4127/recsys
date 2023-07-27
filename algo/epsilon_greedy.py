@@ -43,3 +43,7 @@ class EpsilonGreedyModel(Model):
         recs[random_mask] = random_samples[random_mask]
 
         return create_spark(users, recs.astype(int), success_ratio[recs.astype(int)], k)
+
+    @property
+    def item_popularity(self):
+        return list(self.success_count / self.count)
