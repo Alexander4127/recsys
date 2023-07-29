@@ -43,3 +43,8 @@ def plot_selection(recommendations, names, w=15, h=5):
         plt.ylabel("dist between arms", fontsize=12)
         plt.legend()
     plt.show()
+
+
+def extract_features(df, col_idx):
+    df.index = df[col_idx]
+    return df.drop(columns=[col_idx])
