@@ -1,9 +1,10 @@
-## Реализации алгоритмов
+## Algorithm implementation
 
-Здесь находятся имплементации алгоритмов.
-Каждый представляет собой наследника базового класса `Model`, который поддерживает методы
+Each method is an inheritor of the base class `Model` and implements the following methods
 
-- `fit` совершает изначальное обучение модели.
-- `refit` дообучает её, используя данные одной итерации.
-- `predict` получает прогнозы модели.
-- `item_popularity` оценивает популярность для каждого товара.
+- `fit` perfoms initial training of the model.
+- `refit` further trains it using data from one iteration.
+- `predict` gets the model forecast.
+- `item_popularity` estimates popularity for each product.
+
+Experiments in several formulations of the problem are presented in the file `bandits.ipynb`.
